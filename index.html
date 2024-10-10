@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharable Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <div id="profile-img-container" class="profile-img-container">
+      <img id="profile-img" class="profile-img" src="pct.jpg" alt="Profile Image">
+    </div>
+
+    
+    <form id="resume-form">
+      <h1 class="glowing-text">Sharable Resume Builder</h1>
+
+     
+      <div class="input-box">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+
+     
+      <div class="input-box">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="input-box">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      
+      <div class="input-box">
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Enter your education" required></textarea>
+      </div>
+
+     
+      <div class="input-box">
+        <label for="work">Work Experience:</label>
+        <textarea id="work" placeholder="Enter your work" required></textarea>
+      </div>
+
+      
+      <div class="input-box">
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" placeholder="Enter your skills" required>
+      </div>
+
+      
+      <div class="submit-btn">
+        <button type="submit">Generate Resume</button>
+      </div>
+    </form>
+
+    
+    <div id="resume-preview" class="resume-preview">
+      <h2>Generated Resume</h2>
+      <div id="resume-content"></div>
+      <div id="share-link" style="display: none;">
+        <h3>Share Your Resume:</h3>
+        <input type="text" id="resume-url" readonly>
+        <button id="copy-link">Copy Link</button>
+        <button id="download-pdf">Download as PDF</button>
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
